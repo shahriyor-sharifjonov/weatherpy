@@ -15,4 +15,4 @@ def get_weather(place):
 
 
 eel.init('web')
-eel.start('main.html', size=(700, 700))
+eel.start('main.html')
