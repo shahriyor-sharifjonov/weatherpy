@@ -39,6 +39,7 @@ body{
 }
 
 #show{
+  position: relative;
   border: none;
   max-width: max-content;
   width: 100%;
@@ -50,7 +51,31 @@ body{
   font-family: 'montserrat', sans-serif;
   font-weight: 600;
   margin-bottom: 25px;
+  transition: all 0.3s linear;
   box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#show:hover{
+  color: #fff;
+}
+
+#show::before{
+  content: '';
+  position: absolute;
+  background: #333;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s linear;
+  z-index: -1;
+  border-radius: 50% 50% 0 0;
+}
+
+#show:hover::before{
+  height: 180%;
 }
 
 #info{
@@ -67,3 +92,4 @@ body{
   font-weight: 500;
   color: #333;
 }
+
